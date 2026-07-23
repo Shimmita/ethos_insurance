@@ -4,50 +4,90 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   ShieldCheck,
-  Car,
-  Home as HomeIcon,
-  Heart,
-  UserX,
-  Building2,
-  FileText,
-  Users,
-  Briefcase,
-  Lock,
-  Wheat,
-  Ship,
-  Plane,
   Award,
   Sparkles,
   ChevronRight,
   Phone,
   Mail,
   MapPin,
-  Clock,
   Shield,
+  Heart,
 } from "lucide-react";
 import Navbar from "./components/Navbar";
 
 export default function Home() {
   const personalServices = [
-    { title: "Motor Vehicle Insurance", icon: Car },
-    { title: "Home & Property Insurance", icon: HomeIcon },
-    { title: "Life & Health Insurance", icon: Heart },
-    { title: "Personal Accident Insurance", icon: UserX },
+    {
+      title: "Motor Vehicle Insurance",
+      desc: "Comprehensive vehicle protection against accidents, theft, and third-party liabilities.",
+      image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&q=80",
+    },
+    {
+      title: "Home & Property Insurance",
+      desc: "Safeguard your residence, structures, and valuable domestic belongings.",
+      image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80",
+    },
+    {
+      title: "Life & Health Insurance",
+      desc: "Ensure medical access and financial security for your family's future.",
+      image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80",
+    },
+    {
+      title: "Personal Accident Insurance",
+      desc: "24/7 financial support against unexpected injuries or bodily harm.",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80",
+    },
   ];
 
   const businessServices = [
-    { title: "Commercial Property Insurance", icon: Building2 },
-    { title: "Liability Insurance", icon: FileText },
-    { title: "Workers Compensation", icon: Users },
-    { title: "Business Interruption Insurance", icon: Briefcase },
-    { title: "Cyber Risk Insurance", icon: Lock },
+    {
+      title: "Commercial Property Insurance",
+      desc: "Protect office spaces, retail outlets, and equipment from physical hazards.",
+      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80",
+    },
+    {
+      title: "Liability Insurance",
+      desc: "Shield your corporate entity from legal claims and third-party damages.",
+      image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&q=80",
+    },
+    {
+      title: "Workers Compensation",
+      desc: "Provide mandatory coverage for workplace injuries and staff wellness.",
+      image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80",
+    },
+    {
+      title: "Business Interruption Insurance",
+      desc: "Maintain steady revenue stream during unforeseen operational halts.",
+      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80",
+    },
+    {
+      title: "Cyber Risk Insurance",
+      desc: "Protect critical enterprise data assets against cyber threats and breaches.",
+      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80",
+    },
   ];
 
   const specializedServices = [
-    { title: "Agricultural Insurance", icon: Wheat },
-    { title: "Marine Cargo Insurance", icon: Ship },
-    { title: "Travel Insurance", icon: Plane },
-    { title: "Group Insurance Schemes", icon: Users },
+    {
+      title: "Agricultural Insurance",
+      desc: "Coverage tailored for crops, livestock, and agricultural infrastructure in Kenya.",
+      image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80",
+    },
+    {
+      title: "Marine Cargo Insurance",
+      desc: "Safeguard shipments and goods in transit across sea, air, and overland routes.",
+      image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80",
+    },
+    {
+      title: "Travel Insurance",
+      desc: "Worldwide emergency assistance and coverage for lost baggage or delays.",
+      image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80",
+    },
+    {
+      title: "Group Insurance Schemes",
+      desc: "Scalable group policy solutions for corporations, SACCOs, and institutions.",
+      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80",
+    },
   ];
 
   const whyChooseUs = [
@@ -131,7 +171,7 @@ export default function Home() {
             >
               <div className="relative mx-auto w-full h-[400px] rounded-2xl overflow-hidden shadow-2xl border-2 border-white/10">
                 <Image
-                  src="/insuraance.png"
+                  src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&q=80"
                   alt="Professional Consultants"
                   fill
                   className="object-cover"
@@ -148,7 +188,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-lg border border-blue-50">
               <Image
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80"
+                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80"
                 alt="Ethos Team"
                 fill
                 className="object-cover"
@@ -167,7 +207,6 @@ export default function Home() {
                 At Ethos Insurance Agency Ltd, we believe insurance is more than just a policy—it’s about building trust and providing peace of mind. We partner with reputable insurers to offer a wide range of products, ensuring optimal coverage at competitive rates.
               </p>
 
-              {/* Vision & Mission Cards */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="p-4 rounded-xl bg-blue-50 border border-blue-100">
                   <h3 className="font-bold text-blue-900 mb-1">Our Vision</h3>
@@ -201,79 +240,100 @@ export default function Home() {
           <div className="space-y-16">
             {/* Personal Insurance */}
             <div>
-              <h3 className="text-xl font-bold text-blue-950 mb-6 flex items-center gap-2">
-                <span className="w-3 h-3 rounded-full bg-blue-600"></span>
+              <h3 className="text-2xl font-bold text-blue-950 mb-6 flex items-center gap-2">
+                <span className="w-3.5 h-3.5 rounded-full bg-blue-600"></span>
                 Personal Insurance
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {personalServices.map((service, idx) => {
-                  const Icon = service.icon;
-                  return (
-                    <motion.div
-                      whileHover={{ y: -5 }}
-                      key={idx}
-                      className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-100"
-                    >
-                      <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-4">
-                        <Icon className="w-6 h-6" />
+                {personalServices.map((service, idx) => (
+                  <motion.div
+                    whileHover={{ y: -6 }}
+                    key={idx}
+                    className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 flex flex-col"
+                  >
+                    <div className="relative h-48 w-full overflow-hidden">
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    </div>
+                    <div className="p-5 flex-1 flex flex-col justify-between bg-white">
+                      <div>
+                        <h4 className="font-bold text-slate-900 text-lg mb-2">{service.title}</h4>
+                        <p className="text-xs text-slate-600 leading-relaxed">{service.desc}</p>
                       </div>
-                      <h4 className="font-semibold text-slate-900 mb-2">{service.title}</h4>
-                      <p className="text-xs text-slate-500">Comprehensive protection tailored for peace of mind.</p>
-                    </motion.div>
-                  );
-                })}
+                    </div>
+                  </motion.div>
+                ))}
               </div>
             </div>
 
             {/* Business Insurance */}
             <div>
-              <h3 className="text-xl font-bold text-blue-950 mb-6 flex items-center gap-2">
-                <span className="w-3 h-3 rounded-full bg-blue-600"></span>
+              <h3 className="text-2xl font-bold text-blue-950 mb-6 flex items-center gap-2">
+                <span className="w-3.5 h-3.5 rounded-full bg-blue-600"></span>
                 Business Insurance
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {businessServices.map((service, idx) => {
-                  const Icon = service.icon;
-                  return (
-                    <motion.div
-                      whileHover={{ y: -5 }}
-                      key={idx}
-                      className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-100"
-                    >
-                      <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-4">
-                        <Icon className="w-6 h-6" />
+                {businessServices.map((service, idx) => (
+                  <motion.div
+                    whileHover={{ y: -6 }}
+                    key={idx}
+                    className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 flex flex-col"
+                  >
+                    <div className="relative h-48 w-full overflow-hidden">
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        className="object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    </div>
+                    <div className="p-5 flex-1 flex flex-col justify-between bg-white">
+                      <div>
+                        <h4 className="font-bold text-slate-900 text-lg mb-2">{service.title}</h4>
+                        <p className="text-xs text-slate-600 leading-relaxed">{service.desc}</p>
                       </div>
-                      <h4 className="font-semibold text-slate-900 mb-2">{service.title}</h4>
-                      <p className="text-xs text-slate-500">Safeguard enterprise assets, workforce, and operational workflow.</p>
-                    </motion.div>
-                  );
-                })}
+                    </div>
+                  </motion.div>
+                ))}
               </div>
             </div>
 
             {/* Specialized Solutions */}
             <div>
-              <h3 className="text-xl font-bold text-blue-950 mb-6 flex items-center gap-2">
-                <span className="w-3 h-3 rounded-full bg-blue-600"></span>
+              <h3 className="text-2xl font-bold text-blue-950 mb-6 flex items-center gap-2">
+                <span className="w-3.5 h-3.5 rounded-full bg-blue-600"></span>
                 Specialized Solutions
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {specializedServices.map((service, idx) => {
-                  const Icon = service.icon;
-                  return (
-                    <motion.div
-                      whileHover={{ y: -5 }}
-                      key={idx}
-                      className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-100"
-                    >
-                      <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-4">
-                        <Icon className="w-6 h-6" />
+                {specializedServices.map((service, idx) => (
+                  <motion.div
+                    whileHover={{ y: -6 }}
+                    key={idx}
+                    className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 flex flex-col"
+                  >
+                    <div className="relative h-48 w-full overflow-hidden">
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        className="object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    </div>
+                    <div className="p-5 flex-1 flex flex-col justify-between bg-white">
+                      <div>
+                        <h4 className="font-bold text-slate-900 text-lg mb-2">{service.title}</h4>
+                        <p className="text-xs text-slate-600 leading-relaxed">{service.desc}</p>
                       </div>
-                      <h4 className="font-semibold text-slate-900 mb-2">{service.title}</h4>
-                      <p className="text-xs text-slate-500">Industry-specific policies covering unique risk profiles.</p>
-                    </motion.div>
-                  );
-                })}
+                    </div>
+                  </motion.div>
+                ))}
               </div>
             </div>
           </div>
