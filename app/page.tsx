@@ -14,6 +14,8 @@ import {
   Heart,
 } from "lucide-react";
 import Navbar from "./components/Navbar";
+import carImage from "../public/car.jpg"; // Import the car image
+
 
 export default function Home() {
   const personalServices = [
@@ -48,7 +50,7 @@ export default function Home() {
     {
       title: "Liability Insurance",
       desc: "Shield your corporate entity from legal claims and third-party damages.",
-      image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&q=80",
+      image: carImage,
     },
     {
       title: "Workers Compensation",
